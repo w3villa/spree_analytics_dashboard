@@ -1,1 +1,1 @@
-Rails.application.config.assets.precompile += %w( spree/backend/traffic.js )
+Rails.application.config.assets.precompile += %w( spree/backend/traffic.js spree/backend/traffic.css )

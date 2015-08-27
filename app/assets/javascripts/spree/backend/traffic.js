@@ -9,7 +9,7 @@ $(document).ready(function() {
 	$("#datepicker").datepicker({
 		dateFormat: "yy-mm-dd",
 		onSelect: function(dateText) {
-			location.href = "/traffic?date=" + dateText
+			location.href = "/admin/traffic?date=" + dateText
 		}
 	});
 	$(".page-link").click(function() {

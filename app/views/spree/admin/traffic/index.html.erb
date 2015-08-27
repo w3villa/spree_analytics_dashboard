@@ -1,8 +1,58 @@
+<%= stylesheet_link_tag "spree/backend/traffic" %>
+
 <% content_for :page_title do %>
   <%= Spree.t(:traffic) %>
 <% end %>
 
-<input type="text" id="datepicker" value="<%= params[:date] %>" />
-<canvas id="dailyStatsChart"></canvas>
+
+<div class="panel.panel-default">
+	<div class="panel-heading">Daily Traffic</div>
+	<div class="panel-body">
+		<input type="text" id="datepicker" value="<%= params[:date] %>" />
+		<canvas id="dailyStatsChart"></canvas>	
+	</div>
+</div>
+
+<div class="col-md-6">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Page</th>
+        <th>Count</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @pages.each do |key, page| %>
+        <tr>
+          <td><%= link_to page[:name], "#", class: "page-link", "data-target" => key %></td>
+          <td><%= page[:count] %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<div class="col-md-6">
+	<% @pages.each do |key, page| %>
+		<div class="info hide" id="<%= key %>">
+		  <table class="table">
+		    <thead>
+		      <tr>
+		        <th>Page</th>
+		        <th>Count</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <% page[:source_info].each do |source_info| %>
+		        <tr>
+		          <td><%= source_info[:country] %></td>
+		          <td class="refferer"><%= source_info[:referrer] %></td>
+		        </tr>
+		      <% end %>
+		    </tbody>
+		  </table>
+	  </div>
+  <% end %>
+</div>
 
 <%= javascript_include_tag "spree/backend/traffic" %>

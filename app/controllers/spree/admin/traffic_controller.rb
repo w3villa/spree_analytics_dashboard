@@ -3,6 +3,7 @@ module Spree
     class TrafficController < Spree::Admin::BaseController
 
       def index
+      	@pages = Impression.for_date(params[:date] || Date.today)
       end
 
       def trend
