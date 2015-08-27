@@ -1,0 +1,8 @@
+<% content_for :page_title do %>
+  <%= Spree.t(:traffic) %>
+<% end %>
+
+<input type="text" id="datepicker" value="<%= params[:date] %>" />
+<canvas id="dailyStatsChart"></canvas>
+
+<%= javascript_include_tag "spree/backend/traffic" %>
