@@ -7,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = "spree_analytics_dashboard"
   spec.version       = SpreeAnalyticsDashboard::VERSION
   spec.authors       = ["Ishank Gupta"]
-  spec.email         = ["ishank_18@yahoo.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
+  spec.email         = ["ishank@w3villa.com"]
+  spec.summary       = %q{Dashboard for spree traffic}
   spec.description   = %q{Dashboard for spree traffic}
-  spec.homepage      = ""
+  spec.homepage      = "http://w3villa.com/"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

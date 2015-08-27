@@ -4,5 +4,4 @@ require "impressionist"
 require "geoip"
 
 module SpreeAnalyticsDashboard
-  # Your code goes here...
 end
