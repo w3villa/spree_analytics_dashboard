@@ -1,0 +1,16 @@
+#dailyOrdersChart {
+	min-height: 200px;	
+	overflow: hidden;
+	margin: 20px;
+	margin-bottom: 0px;
+}
+
+#dailyOrdersPie{
+	margin: 20px;
+	min-height: 200px;
+}
+
+
+.form-control{
+	margin: 10px;
+}
